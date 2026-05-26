@@ -45,3 +45,16 @@ GitHub will give you a public website URL after it deploys.
 Every teammate should document their process during the year, not only at the end. If you learned something the hard way, write it down while it is still fresh.
 
 Use the templates in [`templates/`](templates/README.md) when adding new pages.
+
+## Updating Pages From the Website
+
+Team members can update wiki pages from the website by using the **Edit this page** link at the top of each page.
+
+Recommended permissions:
+
+1. Add active team members as GitHub collaborators.
+2. Give most members write access if you trust direct edits, or require pull requests if leaders should review changes first.
+3. Ask members to write clear commit messages like `Update electrical handoff notes`.
+4. Review major changes before competition and at the end of the year.
+
+This site is static, so edits are saved through GitHub rather than directly through the webpage.

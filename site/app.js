@@ -90,6 +90,7 @@ const page = document.querySelector("#page");
 const pageContent = document.querySelector("#pageContent");
 const sourceLink = document.querySelector("#sourceLink");
 const copyPath = document.querySelector("#copyPath");
+const repoEditBase = "https://github.com/jmonhol2/UTKLunabotics.github.io/edit/main/";
 
 function escapeHtml(value) {
   return value
@@ -288,7 +289,7 @@ async function loadPage(path) {
   home.hidden = true;
   page.hidden = false;
   pageContent.innerHTML = "<p>Loading page...</p>";
-  sourceLink.href = path;
+  sourceLink.href = `${repoEditBase}${path}`;
 
   try {
     const response = await fetch(path);

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lunabotics Team Wiki</title>
+    <link rel="stylesheet" href="site/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#/">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span>
+          <strong>Lunabotics Wiki</strong>
+          <small>Team knowledge base</small>
+        </span>
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="#/docs/leadership/README.md">Leadership</a>
+        <a href="#/docs/teams/README.md">Teams</a>
+        <a href="#/docs/start-here/project-cycle-overview.md">Project Cycle</a>
+        <a href="#/templates/README.md">Templates</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar" aria-label="Wiki navigation">
+        <label class="search-label" for="search">Search wiki</label>
+        <input id="search" class="search" type="search" placeholder="Search pages, teams, roles">
+        <div id="nav" class="nav-list"></div>
+      </aside>
+
+      <section class="content-shell">
+        <div id="home" class="home-view">
+          <section class="hero">
+            <div>
+              <p class="eyebrow">Living handoff system</p>
+              <h1>Lunabotics Team Wiki</h1>
+              <p class="hero-copy">
+                A searchable team website for documenting roles, leadership, subteams,
+                project decisions, tests, lessons learned, and year-to-year handoffs.
+              </p>
+              <div class="hero-actions">
+                <a class="button primary" href="#/docs/start-here/how-to-use-this-wiki.md">Start Here</a>
+                <a class="button" href="#/docs/handoffs/current-year-handoff.md">Current Handoff</a>
+              </div>
+            </div>
+            <div class="status-panel" aria-label="Wiki sections">
+              <div>
+                <span class="metric">5</span>
+                <span>Main teams</span>
+              </div>
+              <div>
+                <span class="metric">9</span>
+                <span>Leadership roles</span>
+              </div>
+              <div>
+                <span class="metric">8</span>
+                <span>Reusable templates</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="quick-grid" aria-label="Important wiki sections">
+            <a class="quick-card" href="#/docs/leadership/README.md">
+              <span>Leadership</span>
+              <strong>Role responsibilities and handoffs</strong>
+            </a>
+            <a class="quick-card" href="#/docs/teams/README.md">
+              <span>Teams</span>
+              <strong>Main teams and nested subteams</strong>
+            </a>
+            <a class="quick-card" href="#/docs/testing/README.md">
+              <span>Testing</span>
+              <strong>Validation plans, data, and failures</strong>
+            </a>
+            <a class="quick-card" href="#/templates/README.md">
+              <span>Templates</span>
+              <strong>Copyable page formats for members</strong>
+            </a>
+          </section>
+        </div>
+
+        <article id="page" class="page-view" hidden>
+          <div class="page-toolbar">
+            <a id="sourceLink" class="text-link" href="#" target="_blank" rel="noreferrer">View source</a>
+            <button id="copyPath" class="icon-button" type="button" title="Copy page path" aria-label="Copy page path">
+              <span aria-hidden="true">#</span>
+            </button>
+          </div>
+          <div id="pageContent" class="markdown"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="site/app.js"></script>
+  </body>
+</html>

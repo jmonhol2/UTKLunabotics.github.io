@@ -58,3 +58,5 @@ Recommended permissions:
 4. Review major changes before competition and at the end of the year.
 
 This site is static, so edits are saved through GitHub rather than directly through the webpage.
+
+The site also includes [`editor.html`](editor.html), a browser-based Markdown editor that saves through the GitHub API. Editors need repository access and a fine-grained GitHub personal access token with **Contents** read/write permission.

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wiki Editor | Lunabotics Team Wiki</title>
+    <link rel="stylesheet" href="site/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span>
+          <strong>Lunabotics Wiki</strong>
+          <small>Website editor</small>
+        </span>
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="index.html">Wiki Home</a>
+        <a href="CONTRIBUTING.md">Contributing Guide</a>
+        <a href="https://github.com/jmonhol2/UTKLunabotics.github.io/settings/access" target="_blank" rel="noreferrer">Repo Access</a>
+      </nav>
+    </header>
+
+    <main class="editor-layout">
+      <section class="editor-panel">
+        <div class="editor-header">
+          <div>
+            <p class="eyebrow dark">GitHub-backed editor</p>
+            <h1>Update a Wiki Page</h1>
+            <p>
+              Load a Markdown page, edit it, preview the result, and save the change back to GitHub.
+            </p>
+          </div>
+          <a id="openPage" class="button editor-home-link" href="index.html">Open page</a>
+        </div>
+
+        <div class="editor-controls">
+          <label>
+            Page
+            <select id="pageSelect"></select>
+          </label>
+          <label>
+            GitHub token
+            <input id="token" type="password" placeholder="Fine-grained token with contents read/write">
+          </label>
+          <label>
+            Commit message
+            <input id="message" type="text" value="Update wiki page">
+          </label>
+        </div>
+
+        <div class="editor-actions">
+          <button id="loadPage" class="button primary editor-button" type="button">Load Page</button>
+          <button id="savePage" class="button editor-button" type="button">Save to GitHub</button>
+          <button id="clearToken" class="button editor-button ghost" type="button">Clear Token</button>
+        </div>
+
+        <p id="status" class="editor-status" role="status">
+          Paste a GitHub token, choose a page, then load it.
+        </p>
+
+        <div class="editor-grid">
+          <label class="editor-textarea-label">
+            Markdown
+            <textarea id="markdown" spellcheck="true"></textarea>
+          </label>
+          <section class="preview-shell" aria-label="Markdown preview">
+            <div class="preview-title">Preview</div>
+            <div id="preview" class="markdown preview"></div>
+          </section>
+        </div>
+      </section>
+
+      <aside class="editor-help">
+        <h2>Token Setup</h2>
+        <p>
+          Each editor needs GitHub access to the repo and a fine-grained personal access token.
+          The token is kept in this browser session only.
+        </p>
+        <ol>
+          <li>Open GitHub account settings.</li>
+          <li>Create a fine-grained token for this repository.</li>
+          <li>Grant <strong>Contents</strong> read and write access.</li>
+          <li>Paste it here when editing.</li>
+        </ol>
+        <a class="text-link" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noreferrer">
+          Create GitHub token
+        </a>
+
+        <h2>Team Rules</h2>
+        <p>
+          Use clear commit messages and avoid editing someone else's active page without checking first.
+          Major structural changes should still go through team leads.
+        </p>
+      </aside>
+    </main>
+
+    <script src="site/editor.js"></script>
+  </body>
+</html>

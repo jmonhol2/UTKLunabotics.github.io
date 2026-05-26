@@ -231,6 +231,12 @@ h1 {
   color: #18202a;
 }
 
+.button.ghost {
+  color: var(--steel);
+  border-color: var(--line);
+  background: #fff;
+}
+
 .status-panel {
   display: grid;
   gap: 12px;
@@ -406,5 +412,167 @@ h1 {
   .hero,
   .page-view {
     padding: 22px;
+  }
+}
+
+.editor-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 22px;
+  padding: 28px;
+}
+
+.editor-panel,
+.editor-help {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 8px 28px rgba(20, 32, 44, 0.06);
+}
+
+.editor-panel {
+  min-width: 0;
+  padding: 24px;
+}
+
+.editor-help {
+  align-self: start;
+  padding: 22px;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: start;
+}
+
+.editor-header h1 {
+  color: var(--ink);
+  font-size: 2.2rem;
+}
+
+.editor-header p,
+.editor-help p,
+.editor-help li {
+  color: var(--muted);
+}
+
+.eyebrow.dark {
+  color: var(--accent);
+}
+
+.editor-home-link {
+  color: var(--steel);
+  border-color: var(--line);
+  background: #fff;
+}
+
+.editor-controls {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(260px, 1fr) minmax(220px, 0.8fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.editor-controls label,
+.editor-textarea-label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.editor-controls input,
+.editor-controls select,
+.editor-textarea-label textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: #f8fafc;
+  font: inherit;
+}
+
+.editor-controls input,
+.editor-controls select {
+  min-height: 42px;
+  padding: 9px 10px;
+}
+
+.editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.editor-button {
+  color: var(--steel);
+}
+
+.editor-status {
+  min-height: 28px;
+  margin: 14px 0;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.editor-status[data-type="success"] {
+  color: var(--accent-strong);
+}
+
+.editor-status[data-type="error"] {
+  color: #a33131;
+}
+
+.editor-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+.editor-textarea-label textarea {
+  min-height: 620px;
+  padding: 14px;
+  resize: vertical;
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  text-transform: none;
+}
+
+.preview-shell {
+  min-width: 0;
+  min-height: 620px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.preview-title {
+  position: sticky;
+  top: 0;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  background: #f8fafc;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.preview {
+  padding: 18px;
+}
+
+@media (max-width: 1100px) {
+  .editor-layout,
+  .editor-grid,
+  .editor-controls {
+    grid-template-columns: 1fr;
   }
 }

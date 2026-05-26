@@ -7,8 +7,10 @@ Use this wiki as a living handoff system. Small updates during the season are be
 1. Open the website.
 2. Go to the page you want to update.
 3. Click **Edit this page**.
-4. Make your changes in GitHub.
-5. Commit directly or open a pull request, depending on team rules.
+4. Paste a fine-grained GitHub token with **Contents** read/write access.
+5. Load the page, make your changes, preview them, and save.
+
+You can also edit pages directly in GitHub if you prefer GitHub's built-in editor.
 
 ## What to Document
 

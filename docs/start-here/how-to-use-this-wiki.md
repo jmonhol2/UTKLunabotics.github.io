@@ -2,7 +2,7 @@
 
 This wiki is for preserving team knowledge across years. It should answer questions like:
 
-- What did we do?
+- What did we do!
 - Why did we do it that way?
 - What worked?
 - What failed?

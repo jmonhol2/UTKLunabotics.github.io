@@ -193,17 +193,28 @@ async function saveSelectedPage() {
 
   rememberToken();
   setStatus(`Saving ${path}...`);
-  const data = await githubRequest(path, {
-    method: "PUT",
-    body: JSON.stringify({
-      message,
-      content: encodeBase64(markdownInput.value),
-      sha: currentSha,
-      branch,
-    }),
-  });
-  currentSha = data.content.sha;
-  setStatus(`Saved ${path}. GitHub Pages may take a minute to update.`, "success");
+  try {
+    const data = await githubRequest(path, {
+      method: "PUT",
+      body: JSON.stringify({
+        message,
+        content: encodeBase64(markdownInput.value),
+        sha: currentSha,
+        branch,
+      }),
+    });
+    currentSha = data.content.sha;
+    setStatus(`Saved ${path}. GitHub Pages may take a minute to update.`, "success");
+  } catch (error) {
+    if (error.message.includes("does not match")) {
+      const latest = await githubRequest(`${path}?ref=${branch}`);
+      currentSha = latest.sha;
+      throw new Error(
+        "GitHub has a newer version of this page. Your edits are still here. Review them, then click Save to GitHub again if you want to overwrite the latest version."
+      );
+    }
+    throw error;
+  }
 }
 
 editablePages.forEach(([label, path]) => {
